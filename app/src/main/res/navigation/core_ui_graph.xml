@@ -18,6 +18,9 @@
         <action android:id="@+id/action_to_input"
             app:destination="@id/coreUIInput"/>
 
+        <action android:id="@+id/action_to_appbar"
+            app:destination="@id/coreUIAppbar"/>
+
     </fragment>
 
     <fragment
@@ -31,6 +34,11 @@
         android:name="com.redveloper.redveloper_core_ui.detail.CoreUIInput"
         android:label="fragment_core_u_i_input"
         tools:layout="@layout/fragment_core_u_i_input" />
+    <fragment
+        android:id="@+id/coreUIAppbar"
+        android:name="com.redveloper.redveloper_core_ui.detail.CoreUIAppbar"
+        android:label="fragment_core_u_i_appbar"
+        tools:layout="@layout/fragment_core_u_i_appbar" />
 
 
 </navigation>

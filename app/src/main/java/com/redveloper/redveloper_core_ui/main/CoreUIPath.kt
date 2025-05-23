@@ -4,7 +4,8 @@ enum class CoreUIPath (
     val path: String
 ){
     BUTTON("button"),
-    INPUT("input")
+    INPUT("input"),
+    APPBAR("appbar")
 }
 
 fun getCoreUIPath(path: String): CoreUIPath? {
