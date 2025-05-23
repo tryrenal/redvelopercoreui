@@ -27,6 +27,9 @@
         <action android:id="@+id/action_to_search"
             app:destination="@id/coreUISearch"/>
 
+        <action android:id="@+id/action_to_spinner"
+            app:destination="@+id/coreUISpinner"/>
+
     </fragment>
 
     <fragment
@@ -58,5 +61,11 @@
         android:name="com.redveloper.redveloper_core_ui.detail.CoreUISearch"
         android:label="fragment_core_u_i_search"
         tools:layout="@layout/fragment_core_u_i_search"/>
+
+    <fragment
+        android:id="@+id/coreUISpinner"
+        android:name="com.redveloper.redveloper_core_ui.detail.CoreUISpinner"
+        android:label="fragment_core_u_i_spinner"
+        tools:layout="@layout/fragment_core_u_i_spinner"/>
 
 </navigation>
