@@ -6,7 +6,8 @@ enum class CoreUIPath (
     BUTTON("button"),
     INPUT("input"),
     APPBAR("appbar"),
-    CHECKED("checked")
+    CHECKED("checked"),
+    SEARCH("search")
 }
 
 fun getCoreUIPath(path: String): CoreUIPath? {

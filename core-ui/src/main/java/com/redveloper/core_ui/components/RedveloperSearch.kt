@@ -1,14 +1,17 @@
 package com.redveloper.core_ui.components
 
 import android.content.Context
+import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.EditText
+import androidx.core.widget.addTextChangedListener
 import com.redveloper.core_ui.R as CoreR
 
 class RedveloperSearch: BaseCustomView {
 
     private lateinit var etSearch: EditText
+    private var textWatcher: TextWatcher? = null
 
     constructor(context: Context): super(context)
     constructor(context: Context, attr: AttributeSet?): super(context, attr){
@@ -45,4 +48,14 @@ class RedveloperSearch: BaseCustomView {
         set(value) {
             etSearch.setText(value)
         }
+
+    fun listenTextChanged(callback: ((String) -> Unit)){
+        textWatcher = etSearch.addTextChangedListener{
+            callback.invoke(it.toString())
+        }
+    }
+
+    fun removeListenTextChanged(){
+        etSearch.removeTextChangedListener(textWatcher)
+    }
 }

@@ -24,6 +24,9 @@
         <action android:id="@+id/action_to_checked"
             app:destination="@id/coreUIChecked"/>
 
+        <action android:id="@+id/action_to_search"
+            app:destination="@id/coreUISearch"/>
+
     </fragment>
 
     <fragment
@@ -49,5 +52,11 @@
         android:name="com.redveloper.redveloper_core_ui.detail.CoreUIChecked"
         android:label="fragment_core_u_i_checked"
         tools:layout="@layout/fragment_core_u_i_checked" />
+
+    <fragment
+        android:id="@+id/coreUISearch"
+        android:name="com.redveloper.redveloper_core_ui.detail.CoreUISearch"
+        android:label="fragment_core_u_i_search"
+        tools:layout="@layout/fragment_core_u_i_search"/>
 
 </navigation>
