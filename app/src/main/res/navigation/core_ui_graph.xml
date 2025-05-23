@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/core_ui_graph"
+    app:startDestination="@id/mainFragment">
+
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.redveloper.redveloper_core_ui.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+
+        <action android:id="@+id/action_to_button"
+            app:destination="@id/coreUIButton"/>
+
+        <action android:id="@+id/action_to_input"
+            app:destination="@id/coreUIInput"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/coreUIButton"
+        android:name="com.redveloper.redveloper_core_ui.detail.CoreUIButton"
+        android:label="fragment_core_u_i_button"
+        tools:layout="@layout/fragment_core_u_i_button" />
+
+    <fragment
+        android:id="@+id/coreUIInput"
+        android:name="com.redveloper.redveloper_core_ui.detail.CoreUIInput"
+        android:label="fragment_core_u_i_input"
+        tools:layout="@layout/fragment_core_u_i_input" />
+
+
+</navigation>

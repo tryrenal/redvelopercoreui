@@ -2,10 +2,13 @@ package com.redveloper.core_ui.components.input
 
 import android.content.Context
 import android.text.InputType
+import android.text.TextWatcher
+import android.text.method.PasswordTransformationMethod
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.EditText
 import android.widget.TextView
+import androidx.core.widget.addTextChangedListener
 import com.redveloper.core_ui.R as CoreR
 import com.redveloper.core_ui.components.BaseCustomView
 import com.redveloper.core_ui.utils.view.isVisbile
@@ -15,6 +18,7 @@ class RedveloperInput : BaseCustomView {
     private lateinit var tvLabel: TextView
     private lateinit var tvHint: TextView
     private lateinit var etInput: EditText
+    private var textWatcher: TextWatcher? = null
 
     constructor(context: Context): super(context)
     constructor(context: Context, attr: AttributeSet?): super(context, attr){
@@ -57,6 +61,10 @@ class RedveloperInput : BaseCustomView {
             EnumInputType.NUMBER -> {
                 etInput.inputType = InputType.TYPE_CLASS_NUMBER
             }
+            EnumInputType.PASSWORD -> {
+                etInput.inputType = InputType.TYPE_TEXT_VARIATION_PASSWORD
+                etInput.transformationMethod = PasswordTransformationMethod()
+            }
         }
     }
 
@@ -70,6 +78,16 @@ class RedveloperInput : BaseCustomView {
         tvLabel.isVisbile(!label.isNullOrBlank())
         if(!label.isNullOrBlank())
             tvLabel.text = label
+    }
+
+    fun listenTextChanged(callback: ((String) -> Unit)){
+        textWatcher = etInput.addTextChangedListener{
+            callback.invoke(it.toString())
+        }
+    }
+
+    fun removeListenTextChanged(){
+        etInput.removeTextChangedListener(textWatcher)
     }
 
     var editTextContent: String?

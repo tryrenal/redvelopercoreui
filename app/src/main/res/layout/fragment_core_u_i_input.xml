@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".detail.CoreUIInput">
+
+    <com.redveloper.core_ui.components.input.RedveloperInput
+        app:inputType="text"
+        app:hint="input text"
+        app:label="input text"
+        android:id="@+id/input_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.redveloper.core_ui.components.input.RedveloperInput
+        android:layout_marginTop="16dp"
+        app:inputType="email"
+        app:hint="input email"
+        app:label="input email"
+        android:id="@+id/input_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.redveloper.core_ui.components.input.RedveloperInput
+        app:inputType="password"
+        android:layout_marginTop="16dp"
+        app:hint="input password"
+        app:label="input password"
+        android:id="@+id/input_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.redveloper.core_ui.components.input.RedveloperInput
+        app:inputType="number"
+        android:layout_marginTop="16dp"
+        app:hint="input number"
+        app:label="input number"
+        android:id="@+id/input_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

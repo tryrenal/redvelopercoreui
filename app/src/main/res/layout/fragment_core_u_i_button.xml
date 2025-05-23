@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/grey"
+    tools:context=".detail.CoreUIButton">
+
+    <com.redveloper.core_ui.components.RedveloperButton
+        app:label="primary"
+        app:btnStyle="primary"
+        android:id="@+id/btn_primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.redveloper.core_ui.components.RedveloperButton
+        app:label="primary with icon"
+        app:icon="@drawable/ic_search"
+        android:layout_marginTop="16dp"
+        app:iconColor="@color/white"
+        android:id="@+id/btn_primary_ic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.redveloper.core_ui.components.RedveloperButton
+        app:label="button disable"
+        app:btnStyle="primary"
+        android:layout_marginTop="16dp"
+        android:id="@+id/btn_primary_disable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.redveloper.core_ui.components.RedveloperButton
+        app:label="secondary"
+        app:btnStyle="secondary"
+        android:layout_marginTop="16dp"
+        android:id="@+id/btn_secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.redveloper.core_ui.components.RedveloperButton
+        app:label="secondary with icon"
+        app:icon="@drawable/ic_search"
+        app:iconColor="@color/green"
+        android:layout_marginTop="16dp"
+        android:id="@+id/btn_secondary_ic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
