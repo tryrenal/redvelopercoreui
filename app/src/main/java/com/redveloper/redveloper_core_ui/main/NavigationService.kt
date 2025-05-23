@@ -7,5 +7,6 @@ fun navigationTo(path: CoreUIPath): Int{
         CoreUIPath.INPUT -> R.id.action_to_input
         CoreUIPath.BUTTON -> R.id.action_to_button
         CoreUIPath.APPBAR -> R.id.action_to_appbar
+        CoreUIPath.CHECKED -> R.id.action_to_checked
     }
 }

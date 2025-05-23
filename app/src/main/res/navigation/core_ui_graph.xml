@@ -21,6 +21,9 @@
         <action android:id="@+id/action_to_appbar"
             app:destination="@id/coreUIAppbar"/>
 
+        <action android:id="@+id/action_to_checked"
+            app:destination="@id/coreUIChecked"/>
+
     </fragment>
 
     <fragment
@@ -34,11 +37,17 @@
         android:name="com.redveloper.redveloper_core_ui.detail.CoreUIInput"
         android:label="fragment_core_u_i_input"
         tools:layout="@layout/fragment_core_u_i_input" />
+
     <fragment
         android:id="@+id/coreUIAppbar"
         android:name="com.redveloper.redveloper_core_ui.detail.CoreUIAppbar"
         android:label="fragment_core_u_i_appbar"
         tools:layout="@layout/fragment_core_u_i_appbar" />
 
+    <fragment
+        android:id="@+id/coreUIChecked"
+        android:name="com.redveloper.redveloper_core_ui.detail.CoreUIChecked"
+        android:label="fragment_core_u_i_checked"
+        tools:layout="@layout/fragment_core_u_i_checked" />
 
 </navigation>

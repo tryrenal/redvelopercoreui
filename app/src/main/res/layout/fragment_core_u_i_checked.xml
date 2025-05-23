@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="16dp"
+    tools:context=".detail.CoreUIChecked">
+
+    <com.redveloper.core_ui.components.RedveloperChecked
+        android:id="@+id/check_one"
+        app:label="ini label checked"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.redveloper.core_ui.components.RedveloperChecked
+        android:id="@+id/check_two"
+        android:layout_marginTop="10dp"
+        app:label="ini label checked"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.redveloper.core_ui.components.RedveloperChecked
+        android:id="@+id/check_three"
+        android:layout_marginTop="10dp"
+        app:label="ini label checked"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
