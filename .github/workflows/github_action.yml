@@ -8,11 +8,9 @@ on:
         required: true
         default: 'Manual Debug Build'
         description: 'Release Notes'
-
-    on:
-      pull_request:
-        branches:
-          - release
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build-and-distribute:
