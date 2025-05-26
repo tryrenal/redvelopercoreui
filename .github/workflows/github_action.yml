@@ -5,7 +5,7 @@ on:
     inputs:
       release_notes:
         type: string
-        required: true
+        required: false
         default: 'trigger build'
         description: 'Release Notes'
   push:
@@ -20,6 +20,29 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Read tester groups
+        id: read_tester
+        run: |
+          # Default path is project root, adjust if file is elsewhere
+          TESTER_GROUPS=$(cat ./tester.txt)
+          # Remove any whitespace/newlines
+          TESTER_GROUPS=$(echo "$TESTER_GROUPS" | tr -d '\n' | tr -d '\r')
+          echo "Tester groups: $TESTER_GROUPS"
+          echo "::set-output name=groups::$TESTER_GROUPS"
+
+      - name: Read release notes from file
+        id: read_releasenote
+        run: |
+          # Use input if provided, otherwise read from file
+          if [ -n "${{ inputs.release_notes }}" ]; then
+            echo "Using release notes from workflow input"
+            RELEASE_NOTES="${{ inputs.release_notes }}"
+          else
+            echo "Reading release notes from file"
+            RELEASE_NOTES=$(cat ./releasenote.txt)
+          fi
+          echo "::set-output name=notes::$RELEASE_NOTES"
 
       - name: Set up JDK 17
         uses: actions/setup-java@v3
@@ -44,6 +67,6 @@ jobs:
         with:
           appId: ${{ secrets.FIREBASE_APP_ID }}
           serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
-          groups: tester
+          groups: ${{ steps.read_tester.outputs.groups }}
           file: app/build/outputs/apk/debug/app-debug.apk
-          releaseNotes: ${{ inputs.release_notes }}
+          releaseNotes: ${{ steps.read_releasenote.outputs.notes }}
