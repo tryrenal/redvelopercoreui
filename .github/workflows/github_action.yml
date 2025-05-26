@@ -8,10 +8,14 @@ on:
         required: true
         default: 'Manual Debug Build'
         description: 'Release Notes'
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build-and-distribute:
     name: Build and Distribute
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
