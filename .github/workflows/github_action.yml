@@ -24,12 +24,9 @@ jobs:
       - name: Read tester groups
         id: read_tester
         run: |
-          # Default path is project root, adjust if file is elsewhere
-          TESTER_GROUPS=$(cat ./tester.txt)
-          # Remove any whitespace/newlines
-          TESTER_GROUPS=$(echo "$TESTER_GROUPS" | tr -d '\n' | tr -d '\r')
-          echo "Tester groups: $TESTER_GROUPS"
-          echo "::set-output name=groups::$TESTER_GROUPS"
+          # Read and clean emails from file
+          TESTER_EMAILS=$(cat tester.txt | tr -d '[:space:]')
+          echo "::set-output name=emails::$TESTER_EMAILS"
 
       - name: Read release notes from file
         id: read_releasenote
@@ -67,6 +64,6 @@ jobs:
         with:
           appId: ${{ secrets.FIREBASE_APP_ID }}
           serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
-          groups: ${{ steps.read_tester.outputs.groups }}
+          testers: ${{ steps.read_tester.outputs.emails }}
           file: app/build/outputs/apk/debug/app-debug.apk
           releaseNotes: ${{ steps.read_releasenote.outputs.notes }}
