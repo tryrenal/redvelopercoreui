@@ -13,6 +13,7 @@ glide = "4.16.0"
 circleimageview = "3.1.0"
 navigationFragmentKtx = "2.9.0"
 navigationUiKtx = "2.9.0"
+firebaseBOM = "33.14.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -27,6 +28,7 @@ glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBOM" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

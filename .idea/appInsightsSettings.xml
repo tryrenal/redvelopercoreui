@@ -22,10 +22,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.redveloper.redveloper_core_ui" />
+                  <option name="mobileSdkAppId" value="1:783015032730:android:5195b5b29fdb16a43dac23" />
+                  <option name="projectId" value="core-ui-930cd" />
+                  <option name="projectNumber" value="783015032730" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

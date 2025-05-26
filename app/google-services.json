@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "783015032730",
+    "project_id": "core-ui-930cd",
+    "storage_bucket": "core-ui-930cd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783015032730:android:5195b5b29fdb16a43dac23",
+        "android_client_info": {
+          "package_name": "com.redveloper.redveloper_core_ui"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNOryXKGtPtmw2o6OusjtFmLeA-vinhz0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
