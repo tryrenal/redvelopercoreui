@@ -9,9 +9,15 @@ on:
         default: 'Manual Debug Build'
         description: 'Release Notes'
 
+    on:
+      pull_request:
+        branches:
+          - release
+
 jobs:
   build-and-distribute:
     name: Build and Distribute
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
