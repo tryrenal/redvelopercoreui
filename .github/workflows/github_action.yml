@@ -6,18 +6,15 @@ on:
       release_notes:
         type: string
         required: true
-        default: 'Manual Debug Build'
+        default: 'trigger build'
         description: 'Release Notes'
-
-    on:
-      pull_request:
-        branches:
-          - release
+  push:
+    branches:
+      - 'release/**'
 
 jobs:
   build-and-distribute:
     name: Build and Distribute
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
