@@ -6,7 +6,7 @@ on:
       release_notes:
         type: string
         required: true
-        default: 'Manual Debug Build'
+        default: 'trigger build'
         description: 'Release Notes'
   pull_request:
     branches:
@@ -15,7 +15,6 @@ on:
 jobs:
   build-and-distribute:
     name: Build and Distribute
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
