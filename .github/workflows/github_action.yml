@@ -6,7 +6,7 @@ on:
       release_notes:
         type: string
         required: true
-        default: 'Manual Debug Build'
+        default: 'trigger build'
         description: 'Release Notes'
   pull_request:
     branches:
