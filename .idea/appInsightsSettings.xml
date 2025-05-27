@@ -23,9 +23,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.redveloper.redveloper_core_ui" />
-                  <option name="mobileSdkAppId" value="1:783015032730:android:5195b5b29fdb16a43dac23" />
-                  <option name="projectId" value="core-ui-930cd" />
-                  <option name="projectNumber" value="783015032730" />
+                  <option name="mobileSdkAppId" value="1:765905999523:android:629bf0eb3ce951d5781116" />
+                  <option name="projectId" value="redveloper-coreui" />
+                  <option name="projectNumber" value="765905999523" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
